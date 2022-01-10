@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- <link rel="stylesheet" href="assets/css/reset.css" /> -->
+    <title>Best Movie Ever!</title>
+  </head>
+  <body>
+    <!-- Page Title Div -->
+    <header>
+      <div class="container">
+        <div classname="col-12">
+          <div class="justify-content-center">
+            <h1 class="display-3 text-center">The Best Movie Ever!</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Movie Title -->
+    <div class="col-12 container flex-container shadow-text m-5">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="display-1" id="movie-title"></h1>
+          <!-- <h1 class="display-5" id="release-date"></h1> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Movie Poster -->
+    <div class="col-12 container flex-container shadow-text m-5">
+      <div class="row shadow">
+        <img id="movie-poster" />
+      </div>
+    </div>
+
+    <!-- Directors -->
+    <div class="col-12 container flex-container shadow-text m-5">
+      <div class="row">
+        <div class="card p-5 bg-dark shadow">
+          <h4>Movie Directors:</h4>
+          <ul id="movie-directors"></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Actors -->
+    <div class="col-12 container flex-container shadow-text m-5">
+      <div class="row">
+        <div class="card p-5 bg-dark shadow">
+          <h4>Lead Actors:</h4>
+          <ul id="movie-actors"></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plot -->
+    <div class="col-12 justify-content-center flex-container shadow-text">
+      <div class="row">
+        <div class="col-12 justify-content-center">
+          <div class="card p-5 bg-dark shadow">
+            <h4 class="text-center">The Plot:</h4>
+            <p class="text-center" id="movie-plot"></p>
+            <h4 class="text-center">Awards:</h4>
+            <p class="text-center" id="movie-awards"></p>
+            <p></p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button trigger modal -->
+    <div class="row d-flex flex-container m-5">
+      <div class="col-12 flex-container">
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#exampleModal"
+        >
+          Email Sign Up
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal -->
+
+    <div
+      class="modal fade text-dark"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Email</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="movie-signup">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  aria-describedby="emailHelp"
+                />
+                <small id="emailHelp" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
+              </div>
+              
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./assets/scripts/movieApi.js"></script>
+    <script src="./assets/scripts/signup.js"></script>
+  </body>
+</html>
